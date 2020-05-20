@@ -1,6 +1,9 @@
+pub type Extension = String
 
-pub fn extensions(value : String) -> String {
-  case value {
+pub type Mimetype = String
+
+pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
+  case extension {
     "123" -> "application/vnd.lotus-1-2-3"
     "3dml" -> "text/vnd.in3d.3dml"
     "3ds" -> "image/x-3ds"
@@ -989,8 +992,8 @@ pub fn extensions(value : String) -> String {
   }
 }
 
-pub fn mimetypes(value : String) -> List(String) {
-  case value {
+pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
+  case mimetype {
     "application/andrew-inset" -> ["ez"]
     "application/applixware" -> ["aw"]
     "application/atom+xml" -> ["atom"]
@@ -1760,5 +1763,28 @@ pub fn mimetypes(value : String) -> List(String) {
     "x-conference/x-cooltalk" -> ["ice"]
     _ -> [""]
 
+  }
+}
+
+pub type ExtensionType = String
+pub fn web_extensions(extension : Extension) -> tuple(ExtensionType, Extension) {
+  case extension {
+    "css" -> tuple("text", "css")
+    "gif" -> tuple("image", "gif")
+    "html" -> tuple("text", "html")
+    "htm" -> tuple("text", "html")
+    "ico" -> tuple("image", "x-icon")
+    "jpeg" -> tuple("image", "jpeg")
+    "jpg" -> tuple("image", "jpeg")
+    "js" -> tuple("application", "javascript")
+    "mp3" -> tuple("audio", "mpeg")
+    "mp4" -> tuple("video", "mp4")
+    "ogg" -> tuple("audio", "ogg")
+    "ogv" -> tuple("video", "ogg")
+    "png" -> tuple("image", "png")
+    "svg" -> tuple("image", "svg+xml")
+    "wav" -> tuple("audio", "x-wav")
+    "webm" -> tuple("video", "webm")
+    _ -> tuple("application", "octet-stream")
   }
 }
