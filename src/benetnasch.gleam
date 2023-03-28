@@ -1,6 +1,8 @@
-pub type Extension = String
+pub type Extension =
+  String
 
-pub type Mimetype = String
+pub type Mimetype =
+  String
 
 pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
   case extension {
@@ -176,10 +178,12 @@ pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
     "dna" -> "application/vnd.dna"
     "doc" -> "application/msword"
     "docm" -> "application/vnd.ms-word.document.macroenabled.12"
-    "docx" -> "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    "docx" ->
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     "dot" -> "application/msword"
     "dotm" -> "application/vnd.ms-word.template.macroenabled.12"
-    "dotx" -> "application/vnd.openxmlformats-officedocument.wordprocessingml.template"
+    "dotx" ->
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.template"
     "dp" -> "application/vnd.osgi.dp"
     "dpg" -> "application/vnd.dpgraph"
     "dra" -> "audio/vnd.dra"
@@ -604,16 +608,19 @@ pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
     "portpkg" -> "application/vnd.macports.portpkg"
     "pot" -> "application/vnd.ms-powerpoint"
     "potm" -> "application/vnd.ms-powerpoint.template.macroenabled.12"
-    "potx" -> "application/vnd.openxmlformats-officedocument.presentationml.template"
+    "potx" ->
+      "application/vnd.openxmlformats-officedocument.presentationml.template"
     "ppam" -> "application/vnd.ms-powerpoint.addin.macroenabled.12"
     "ppd" -> "application/vnd.cups-ppd"
     "ppm" -> "image/x-portable-pixmap"
     "pps" -> "application/vnd.ms-powerpoint"
     "ppsm" -> "application/vnd.ms-powerpoint.slideshow.macroenabled.12"
-    "ppsx" -> "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
+    "ppsx" ->
+      "application/vnd.openxmlformats-officedocument.presentationml.slideshow"
     "ppt" -> "application/vnd.ms-powerpoint"
     "pptm" -> "application/vnd.ms-powerpoint.presentation.macroenabled.12"
-    "pptx" -> "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    "pptx" ->
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation"
     "pqa" -> "application/vnd.palm"
     "prc" -> "application/x-mobipocket-ebook"
     "pre" -> "application/vnd.lotus-freelance"
@@ -721,7 +728,8 @@ pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
     "skp" -> "application/vnd.koan"
     "skt" -> "application/vnd.koan"
     "sldm" -> "application/vnd.ms-powerpoint.slide.macroenabled.12"
-    "sldx" -> "application/vnd.openxmlformats-officedocument.presentationml.slide"
+    "sldx" ->
+      "application/vnd.openxmlformats-officedocument.presentationml.slide"
     "slt" -> "application/vnd.epson.salt"
     "sm" -> "application/vnd.stepmania.stepchart"
     "smf" -> "application/vnd.stardivision.math"
@@ -946,10 +954,12 @@ pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
     "xls" -> "application/vnd.ms-excel"
     "xlsb" -> "application/vnd.ms-excel.sheet.binary.macroenabled.12"
     "xlsm" -> "application/vnd.ms-excel.sheet.macroenabled.12"
-    "xlsx" -> "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    "xlsx" ->
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     "xlt" -> "application/vnd.ms-excel"
     "xltm" -> "application/vnd.ms-excel.template.macroenabled.12"
-    "xltx" -> "application/vnd.openxmlformats-officedocument.spreadsheetml.template"
+    "xltx" ->
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.template"
     "xlw" -> "application/vnd.ms-excel"
     "xm" -> "audio/xm"
     "xml" -> "application/xml"
@@ -988,11 +998,11 @@ pub fn extension_to_mimetype(extension: Extension) -> Mimetype {
     "zirz" -> "application/vnd.zul"
     "zmm" -> "application/vnd.handheld-entertainment+xml"
     //Files without Extensions are Mapped to Application/Octet-Stream
-      _ -> "application/octet-stream"
+    _ -> "application/octet-stream"
   }
 }
 
-pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
+pub fn mimetype_to_extentions(mimetype: String) -> List(Extension) {
   case mimetype {
     "application/andrew-inset" -> ["ez"]
     "application/applixware" -> ["aw"]
@@ -1019,7 +1029,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/gpx+xml" -> ["gpx"]
     "application/gxf" -> ["gxf"]
     "application/hyperstudio" -> ["stk"]
-    "application/inkml+xml" -> ["ink","inkml"]
+    "application/inkml+xml" -> ["ink", "inkml"]
     "application/ipfix" -> ["ipfix"]
     "application/java-archive" -> ["jar"]
     "application/java-serialized-object" -> ["ser"]
@@ -1033,7 +1043,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/mads+xml" -> ["mads"]
     "application/marc" -> ["mrc"]
     "application/marcxml+xml" -> ["mrcx"]
-    "application/mathematica" -> ["ma","nb","mb"]
+    "application/mathematica" -> ["ma", "nb", "mb"]
     "application/mathml+xml" -> ["mathml"]
     "application/mbox" -> ["mbox"]
     "application/mediaservercontrol+xml" -> ["mscml"]
@@ -1041,24 +1051,27 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/metalink4+xml" -> ["meta4"]
     "application/mets+xml" -> ["mets"]
     "application/mods+xml" -> ["mods"]
-    "application/mp21" -> ["m21","mp21"]
+    "application/mp21" -> ["m21", "mp21"]
     "application/mp4" -> ["mp4s"]
-    "application/msword" -> ["doc","dot"]
+    "application/msword" -> ["doc", "dot"]
     "application/mxf" -> ["mxf"]
-    "application/octet-stream" -> ["bin","dms","lrf","mar","so","dist","distz","pkg","bpk","dump","elc","deploy"]
+    "application/octet-stream" -> [
+      "bin", "dms", "lrf", "mar", "so", "dist", "distz", "pkg", "bpk", "dump",
+      "elc", "deploy",
+    ]
     "application/oda" -> ["oda"]
     "application/oebps-package+xml" -> ["opf"]
     "application/ogg" -> ["ogx"]
     "application/omdoc+xml" -> ["omdoc"]
-    "application/onenote" -> ["onetoc","onetoc2","onetmp","onepkg"]
+    "application/onenote" -> ["onetoc", "onetoc2", "onetmp", "onepkg"]
     "application/oxps" -> ["oxps"]
     "application/patch-ops-error+xml" -> ["xer"]
     "application/pdf" -> ["pdf"]
     "application/pgp-encrypted" -> ["pgp"]
-    "application/pgp-signature" -> ["asc","sig"]
+    "application/pgp-signature" -> ["asc", "sig"]
     "application/pics-rules" -> ["prf"]
     "application/pkcs10" -> ["p10"]
-    "application/pkcs7-mime" -> ["p7m","p7c"]
+    "application/pkcs7-mime" -> ["p7m", "p7c"]
     "application/pkcs7-signature" -> ["p7s"]
     "application/pkcs8" -> ["p8"]
     "application/pkix-attr-cert" -> ["ac"]
@@ -1067,7 +1080,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/pkix-pkipath" -> ["pkipath"]
     "application/pkixcmp" -> ["pki"]
     "application/pls+xml" -> ["pls"]
-    "application/postscript" -> ["ai","eps","ps"]
+    "application/postscript" -> ["ai", "eps", "ps"]
     "application/prs.cww" -> ["cww"]
     "application/pskc+xml" -> ["pskcxml"]
     "application/rdf+xml" -> ["rdf"]
@@ -1091,7 +1104,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/set-payment-initiation" -> ["setpay"]
     "application/set-registration-initiation" -> ["setreg"]
     "application/shf+xml" -> ["shf"]
-    "application/smil+xml" -> ["smi","smil"]
+    "application/smil+xml" -> ["smi", "smil"]
     "application/sparql-query" -> ["rq"]
     "application/sparql-results+xml" -> ["srx"]
     "application/srgs" -> ["gram"]
@@ -1099,7 +1112,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/sru+xml" -> ["sru"]
     "application/ssdl+xml" -> ["ssdl"]
     "application/ssml+xml" -> ["ssml"]
-    "application/tei+xml" -> ["tei","teicorpus"]
+    "application/tei+xml" -> ["tei", "teicorpus"]
     "application/thraud+xml" -> ["tfi"]
     "application/timestamped-data" -> ["tsd"]
     "application/vnd.3gpp.pic-bw-large" -> ["plb"]
@@ -1110,10 +1123,10 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.accpac.simply.aso" -> ["aso"]
     "application/vnd.accpac.simply.imp" -> ["imp"]
     "application/vnd.acucobol" -> ["acu"]
-    "application/vnd.acucorp" -> ["atc","acutc"]
+    "application/vnd.acucorp" -> ["atc", "acutc"]
     "application/vnd.adobe.air-application-installer-package+zip" -> ["air"]
     "application/vnd.adobe.formscentral.fcdt" -> ["fcdt"]
-    "application/vnd.adobe.fxp" -> ["fxp","fxpl"]
+    "application/vnd.adobe.fxp" -> ["fxp", "fxpl"]
     "application/vnd.adobe.xdp+xml" -> ["xdp"]
     "application/vnd.adobe.xfdf" -> ["xfdf"]
     "application/vnd.ahead.space" -> ["ahead"]
@@ -1139,7 +1152,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.cinderella" -> ["cdy"]
     "application/vnd.claymore" -> ["cla"]
     "application/vnd.cloanto.rp9" -> ["rp9"]
-    "application/vnd.clonk.c4group" -> ["c4g","c4d","c4f","c4p","c4u"]
+    "application/vnd.clonk.c4group" -> ["c4g", "c4d", "c4f", "c4p", "c4u"]
     "application/vnd.cluetrust.cartomobile-config" -> ["c11amc"]
     "application/vnd.cluetrust.cartomobile-config-pkg" -> ["c11amz"]
     "application/vnd.commonspace" -> ["csp"]
@@ -1157,10 +1170,10 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.curl.pcurl" -> ["pcurl"]
     "application/vnd.dart" -> ["dart"]
     "application/vnd.data-vision.rdz" -> ["rdz"]
-    "application/vnd.dece.data" -> ["uvf","uvvf","uvd","uvvd"]
-    "application/vnd.dece.ttml+xml" -> ["uvt","uvvt"]
-    "application/vnd.dece.unspecified" -> ["uvx","uvvx"]
-    "application/vnd.dece.zip" -> ["uvz","uvvz"]
+    "application/vnd.dece.data" -> ["uvf", "uvvf", "uvd", "uvvd"]
+    "application/vnd.dece.ttml+xml" -> ["uvt", "uvvt"]
+    "application/vnd.dece.unspecified" -> ["uvx", "uvvx"]
+    "application/vnd.dece.zip" -> ["uvz", "uvvz"]
     "application/vnd.denovo.fcselayout-link" -> ["fe_launch"]
     "application/vnd.dna" -> ["dna"]
     "application/vnd.dolby.mlp" -> ["mlp"]
@@ -1177,15 +1190,15 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.epson.quickanime" -> ["qam"]
     "application/vnd.epson.salt" -> ["slt"]
     "application/vnd.epson.ssf" -> ["ssf"]
-    "application/vnd.eszigno3+xml" -> ["es3","et3"]
+    "application/vnd.eszigno3+xml" -> ["es3", "et3"]
     "application/vnd.ezpix-album" -> ["ez2"]
     "application/vnd.ezpix-package" -> ["ez3"]
     "application/vnd.fdf" -> ["fdf"]
     "application/vnd.fdsn.mseed" -> ["mseed"]
-    "application/vnd.fdsn.seed" -> ["seed","dataless"]
+    "application/vnd.fdsn.seed" -> ["seed", "dataless"]
     "application/vnd.flographit" -> ["gph"]
     "application/vnd.fluxtime.clip" -> ["ftc"]
-    "application/vnd.framemaker" -> ["fm","frame","maker","book"]
+    "application/vnd.framemaker" -> ["fm", "frame", "maker", "book"]
     "application/vnd.frogans.fnc" -> ["fnc"]
     "application/vnd.frogans.ltf" -> ["ltf"]
     "application/vnd.fsc.weblaunch" -> ["fsc"]
@@ -1201,14 +1214,14 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.genomatix.tuxedo" -> ["txd"]
     "application/vnd.geogebra.file" -> ["ggb"]
     "application/vnd.geogebra.tool" -> ["ggt"]
-    "application/vnd.geometry-explorer" -> ["gex","gre"]
+    "application/vnd.geometry-explorer" -> ["gex", "gre"]
     "application/vnd.geonext" -> ["gxt"]
     "application/vnd.geoplan" -> ["g2w"]
     "application/vnd.geospace" -> ["g3w"]
     "application/vnd.gmx" -> ["gmx"]
     "application/vnd.google-earth.kml+xml" -> ["kml"]
     "application/vnd.google-earth.kmz" -> ["kmz"]
-    "application/vnd.grafeq" -> ["gqf","gqs"]
+    "application/vnd.grafeq" -> ["gqf", "gqs"]
     "application/vnd.groove-account" -> ["gac"]
     "application/vnd.groove-help" -> ["ghf"]
     "application/vnd.groove-identity-message" -> ["gim"]
@@ -1228,15 +1241,15 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.hp-pclxl" -> ["pclxl"]
     "application/vnd.hydrostatix.sof-data" -> ["sfd-hdstx"]
     "application/vnd.ibm.minipay" -> ["mpy"]
-    "application/vnd.ibm.modcap" -> ["afp","listafp","list3820"]
+    "application/vnd.ibm.modcap" -> ["afp", "listafp", "list3820"]
     "application/vnd.ibm.rights-management" -> ["irm"]
     "application/vnd.ibm.secure-container" -> ["sc"]
-    "application/vnd.iccprofile" -> ["icc","icm"]
+    "application/vnd.iccprofile" -> ["icc", "icm"]
     "application/vnd.igloader" -> ["igl"]
     "application/vnd.immervision-ivp" -> ["ivp"]
     "application/vnd.immervision-ivu" -> ["ivu"]
     "application/vnd.insors.igm" -> ["igm"]
-    "application/vnd.intercon.formnet" -> ["xpw","xpx"]
+    "application/vnd.intercon.formnet" -> ["xpw", "xpx"]
     "application/vnd.intergeo" -> ["i2g"]
     "application/vnd.intu.qbo" -> ["qbo"]
     "application/vnd.intu.qfx" -> ["qfx"]
@@ -1248,19 +1261,19 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.jcp.javame.midlet-rms" -> ["rms"]
     "application/vnd.jisp" -> ["jisp"]
     "application/vnd.joost.joda-archive" -> ["joda"]
-    "application/vnd.kahootz" -> ["ktz","ktr"]
+    "application/vnd.kahootz" -> ["ktz", "ktr"]
     "application/vnd.kde.karbon" -> ["karbon"]
     "application/vnd.kde.kchart" -> ["chrt"]
     "application/vnd.kde.kformula" -> ["kfo"]
     "application/vnd.kde.kivio" -> ["flw"]
     "application/vnd.kde.kontour" -> ["kon"]
-    "application/vnd.kde.kpresenter" -> ["kpr","kpt"]
+    "application/vnd.kde.kpresenter" -> ["kpr", "kpt"]
     "application/vnd.kde.kspread" -> ["ksp"]
-    "application/vnd.kde.kword" -> ["kwd","kwt"]
+    "application/vnd.kde.kword" -> ["kwd", "kwt"]
     "application/vnd.kenameaapp" -> ["htke"]
     "application/vnd.kidspiration" -> ["kia"]
-    "application/vnd.kinar" -> ["kne","knp"]
-    "application/vnd.koan" -> ["skp","skd","skt","skm"]
+    "application/vnd.kinar" -> ["kne", "knp"]
+    "application/vnd.koan" -> ["skp", "skd", "skt", "skm"]
     "application/vnd.kodak-descriptor" -> ["sse"]
     "application/vnd.las.las+xml" -> ["lasxml"]
     "application/vnd.llamagraphics.life-balance.desktop" -> ["lbd"]
@@ -1293,7 +1306,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.mozilla.xul+xml" -> ["xul"]
     "application/vnd.ms-artgalry" -> ["cil"]
     "application/vnd.ms-cab-compressed" -> ["cab"]
-    "application/vnd.ms-excel" -> ["xls","xlm","xla","xlc","xlt","xlw"]
+    "application/vnd.ms-excel" -> ["xls", "xlm", "xla", "xlc", "xlt", "xlw"]
     "application/vnd.ms-excel.addin.macroenabled.12" -> ["xlam"]
     "application/vnd.ms-excel.sheet.binary.macroenabled.12" -> ["xlsb"]
     "application/vnd.ms-excel.sheet.macroenabled.12" -> ["xlsm"]
@@ -1305,16 +1318,16 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.ms-officetheme" -> ["thmx"]
     "application/vnd.ms-pki.seccat" -> ["cat"]
     "application/vnd.ms-pki.stl" -> ["stl"]
-    "application/vnd.ms-powerpoint" -> ["ppt","pps","pot"]
+    "application/vnd.ms-powerpoint" -> ["ppt", "pps", "pot"]
     "application/vnd.ms-powerpoint.addin.macroenabled.12" -> ["ppam"]
     "application/vnd.ms-powerpoint.presentation.macroenabled.12" -> ["pptm"]
     "application/vnd.ms-powerpoint.slide.macroenabled.12" -> ["sldm"]
     "application/vnd.ms-powerpoint.slideshow.macroenabled.12" -> ["ppsm"]
     "application/vnd.ms-powerpoint.template.macroenabled.12" -> ["potm"]
-    "application/vnd.ms-project" -> ["mpp","mpt"]
+    "application/vnd.ms-project" -> ["mpp", "mpt"]
     "application/vnd.ms-word.document.macroenabled.12" -> ["docm"]
     "application/vnd.ms-word.template.macroenabled.12" -> ["dotm"]
-    "application/vnd.ms-works" -> ["wps","wks","wcm","wdb"]
+    "application/vnd.ms-works" -> ["wps", "wks", "wcm", "wdb"]
     "application/vnd.ms-wpl" -> ["wpl"]
     "application/vnd.ms-xpsdocument" -> ["xps"]
     "application/vnd.mseq" -> ["mseq"]
@@ -1322,7 +1335,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.muvee.style" -> ["msty"]
     "application/vnd.mynfc" -> ["taglet"]
     "application/vnd.neurolanguage.nlu" -> ["nlu"]
-    "application/vnd.nitf" -> ["ntf","nitf"]
+    "application/vnd.nitf" -> ["ntf", "nitf"]
     "application/vnd.noblenet-directory" -> ["nnd"]
     "application/vnd.noblenet-sealer" -> ["nns"]
     "application/vnd.noblenet-web" -> ["nnw"]
@@ -1353,18 +1366,34 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.olpc-sugar" -> ["xo"]
     "application/vnd.oma.dd2+xml" -> ["dd2"]
     "application/vnd.openofficeorg.extension" -> ["oxt"]
-    "application/vnd.openxmlformats-officedocument.presentationml.presentation" -> ["pptx"]
-    "application/vnd.openxmlformats-officedocument.presentationml.slide" -> ["sldx"]
-    "application/vnd.openxmlformats-officedocument.presentationml.slideshow" -> ["ppsx"]
-    "application/vnd.openxmlformats-officedocument.presentationml.template" -> ["potx"]
-    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" -> ["xlsx"]
-    "application/vnd.openxmlformats-officedocument.spreadsheetml.template" -> ["xltx"]
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.document" -> ["docx"]
-    "application/vnd.openxmlformats-officedocument.wordprocessingml.template" -> ["dotx"]
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation" -> [
+      "pptx",
+    ]
+    "application/vnd.openxmlformats-officedocument.presentationml.slide" -> [
+      "sldx",
+    ]
+    "application/vnd.openxmlformats-officedocument.presentationml.slideshow" -> [
+      "ppsx",
+    ]
+    "application/vnd.openxmlformats-officedocument.presentationml.template" -> [
+      "potx",
+    ]
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" -> [
+      "xlsx",
+    ]
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.template" -> [
+      "xltx",
+    ]
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document" -> [
+      "docx",
+    ]
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.template" -> [
+      "dotx",
+    ]
     "application/vnd.osgeo.mapguide.package" -> ["mgp"]
     "application/vnd.osgi.dp" -> ["dp"]
     "application/vnd.osgi.subsystem" -> ["esa"]
-    "application/vnd.palm" -> ["pdb","pqa","oprc"]
+    "application/vnd.palm" -> ["pdb", "pqa", "oprc"]
     "application/vnd.pawaafile" -> ["paw"]
     "application/vnd.pg.format" -> ["str"]
     "application/vnd.pg.osasli" -> ["ei6"]
@@ -1376,7 +1405,9 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.proteus.magazine" -> ["mgz"]
     "application/vnd.publishare-delta-tree" -> ["qps"]
     "application/vnd.pvi.ptid1" -> ["ptid"]
-    "application/vnd.quark.quarkxpress" -> ["qxd","qxt","qwd","qwt","qxl","qxb"]
+    "application/vnd.quark.quarkxpress" -> [
+      "qxd", "qxt", "qwd", "qwt", "qxl", "qxb",
+    ]
     "application/vnd.realvnc.bed" -> ["bed"]
     "application/vnd.recordare.musicxml" -> ["mxl"]
     "application/vnd.recordare.musicxml+xml" -> ["musicxml"]
@@ -1394,17 +1425,17 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.shana.informed.formtemplate" -> ["itp"]
     "application/vnd.shana.informed.interchange" -> ["iif"]
     "application/vnd.shana.informed.package" -> ["ipk"]
-    "application/vnd.simtech-mindmapper" -> ["twd","twds"]
+    "application/vnd.simtech-mindmapper" -> ["twd", "twds"]
     "application/vnd.smaf" -> ["mmf"]
     "application/vnd.smart.teacher" -> ["teacher"]
-    "application/vnd.solent.sdkm+xml" -> ["sdkm","sdkd"]
+    "application/vnd.solent.sdkm+xml" -> ["sdkm", "sdkd"]
     "application/vnd.spotfire.dxp" -> ["dxp"]
     "application/vnd.spotfire.sfs" -> ["sfs"]
     "application/vnd.stardivision.calc" -> ["sdc"]
     "application/vnd.stardivision.draw" -> ["sda"]
     "application/vnd.stardivision.impress" -> ["sdd"]
     "application/vnd.stardivision.math" -> ["smf"]
-    "application/vnd.stardivision.writer" -> ["sdw","vor"]
+    "application/vnd.stardivision.writer" -> ["sdw", "vor"]
     "application/vnd.stardivision.writer-global" -> ["sgl"]
     "application/vnd.stepmania.package" -> ["smzip"]
     "application/vnd.stepmania.stepchart" -> ["sm"]
@@ -1418,25 +1449,25 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.sun.xml.writer" -> ["sxw"]
     "application/vnd.sun.xml.writer.global" -> ["sxg"]
     "application/vnd.sun.xml.writer.template" -> ["stw"]
-    "application/vnd.sus-calendar" -> ["sus","susp"]
+    "application/vnd.sus-calendar" -> ["sus", "susp"]
     "application/vnd.svd" -> ["svd"]
-    "application/vnd.symbian.install" -> ["sis","sisx"]
+    "application/vnd.symbian.install" -> ["sis", "sisx"]
     "application/vnd.syncml+xml" -> ["xsm"]
     "application/vnd.syncml.dm+wbxml" -> ["bdm"]
     "application/vnd.syncml.dm+xml" -> ["xdm"]
     "application/vnd.tao.intent-module-archive" -> ["tao"]
-    "application/vnd.tcpdump.pcap" -> ["pcap","cap","dmp"]
+    "application/vnd.tcpdump.pcap" -> ["pcap", "cap", "dmp"]
     "application/vnd.tmobile-livetv" -> ["tmo"]
     "application/vnd.trid.tpt" -> ["tpt"]
     "application/vnd.triscape.mxs" -> ["mxs"]
     "application/vnd.trueapp" -> ["tra"]
-    "application/vnd.ufdl" -> ["ufd","ufdl"]
+    "application/vnd.ufdl" -> ["ufd", "ufdl"]
     "application/vnd.uiq.theme" -> ["utz"]
     "application/vnd.umajin" -> ["umj"]
     "application/vnd.unity" -> ["unityweb"]
     "application/vnd.uoml+xml" -> ["uoml"]
     "application/vnd.vcx" -> ["vcx"]
-    "application/vnd.visio" -> ["vsd","vst","vss","vsw"]
+    "application/vnd.visio" -> ["vsd", "vst", "vss", "vsw"]
     "application/vnd.visionary" -> ["vis"]
     "application/vnd.vsf" -> ["vsf"]
     "application/vnd.wap.wbxml" -> ["wbxml"]
@@ -1457,7 +1488,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/vnd.yamaha.smaf-audio" -> ["saf"]
     "application/vnd.yamaha.smaf-phrase" -> ["spf"]
     "application/vnd.yellowriver-custom-menu" -> ["cmp"]
-    "application/vnd.zul" -> ["zir","zirz"]
+    "application/vnd.zul" -> ["zir", "zirz"]
     "application/vnd.zzazz.deck+xml" -> ["zaz"]
     "application/voicexml+xml" -> ["vxml"]
     "application/widget" -> ["wgt"]
@@ -1468,15 +1499,15 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/x-abiword" -> ["abw"]
     "application/x-ace-compressed" -> ["ace"]
     "application/x-apple-diskimage" -> ["dmg"]
-    "application/x-authorware-bin" -> ["aab","x32","u32","vox"]
+    "application/x-authorware-bin" -> ["aab", "x32", "u32", "vox"]
     "application/x-authorware-map" -> ["aam"]
     "application/x-authorware-seg" -> ["aas"]
     "application/x-bcpio" -> ["bcpio"]
     "application/x-bittorrent" -> ["torrent"]
-    "application/x-blorb" -> ["blb","blorb"]
+    "application/x-blorb" -> ["blb", "blorb"]
     "application/x-bzip" -> ["bz"]
-    "application/x-bzip2" -> ["bz2","boz"]
-    "application/x-cbr" -> ["cbr","cba","cbt","cbz","cb7"]
+    "application/x-bzip2" -> ["bz2", "boz"]
+    "application/x-cbr" -> ["cbr", "cba", "cbt", "cbz", "cb7"]
     "application/x-cdlink" -> ["vcd"]
     "application/x-cfs-compressed" -> ["cfs"]
     "application/x-chat" -> ["chat"]
@@ -1484,9 +1515,11 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/x-conference" -> ["nsc"]
     "application/x-cpio" -> ["cpio"]
     "application/x-csh" -> ["csh"]
-    "application/x-debian-package" -> ["deb","udeb"]
+    "application/x-debian-package" -> ["deb", "udeb"]
     "application/x-dgc-compressed" -> ["dgc"]
-    "application/x-director" -> ["dir","dcr","dxr","cst","cct","cxt","w3d","fgd","swa"]
+    "application/x-director" -> [
+      "dir", "dcr", "dxr", "cst", "cct", "cxt", "w3d", "fgd", "swa",
+    ]
     "application/x-doom" -> ["wad"]
     "application/x-dtbncx+xml" -> ["ncx"]
     "application/x-dtbook+xml" -> ["dtb"]
@@ -1499,7 +1532,7 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/x-font-linux-psf" -> ["psf"]
     "application/x-font-pcf" -> ["pcf"]
     "application/x-font-snf" -> ["snf"]
-    "application/x-font-type1" -> ["pfa","pfb","pfm","afm"]
+    "application/x-font-type1" -> ["pfa", "pfb", "pfm", "afm"]
     "application/x-freearc" -> ["arc"]
     "application/x-futuresplash" -> ["spl"]
     "application/x-gca-compressed" -> ["gca"]
@@ -1512,9 +1545,9 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/x-iso9660-image" -> ["iso"]
     "application/x-java-jnlp-file" -> ["jnlp"]
     "application/x-latex" -> ["latex"]
-    "application/x-lzh-compressed" -> ["lzh","lha"]
+    "application/x-lzh-compressed" -> ["lzh", "lha"]
     "application/x-mie" -> ["mie"]
-    "application/x-mobipocket-ebook" -> ["prc","mobi"]
+    "application/x-mobipocket-ebook" -> ["prc", "mobi"]
     "application/x-ms-application" -> ["application"]
     "application/x-ms-shortcut" -> ["lnk"]
     "application/x-ms-wmd" -> ["wmd"]
@@ -1524,18 +1557,18 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/x-msbinder" -> ["obd"]
     "application/x-mscardfile" -> ["crd"]
     "application/x-msclip" -> ["clp"]
-    "application/x-msdownload" -> ["exe","dll","com","bat","msi"]
-    "application/x-msmediaview" -> ["mvb","m13","m14"]
-    "application/x-msmetafile" -> ["wmf","wmz","emf","emz"]
+    "application/x-msdownload" -> ["exe", "dll", "com", "bat", "msi"]
+    "application/x-msmediaview" -> ["mvb", "m13", "m14"]
+    "application/x-msmetafile" -> ["wmf", "wmz", "emf", "emz"]
     "application/x-msmoney" -> ["mny"]
     "application/x-mspublisher" -> ["pub"]
     "application/x-msschedule" -> ["scd"]
     "application/x-msterminal" -> ["trm"]
     "application/x-mswrite" -> ["wri"]
-    "application/x-netcdf" -> ["nc","cdf"]
+    "application/x-netcdf" -> ["nc", "cdf"]
     "application/x-nzb" -> ["nzb"]
-    "application/x-pkcs12" -> ["p12","pfx"]
-    "application/x-pkcs7-certificates" -> ["p7b","spc"]
+    "application/x-pkcs12" -> ["p12", "pfx"]
+    "application/x-pkcs7-certificates" -> ["p7b", "spc"]
     "application/x-pkcs7-certreqresp" -> ["p7r"]
     "application/x-rar-compressed" -> ["rar"]
     "application/x-research-info-systems" -> ["ris"]
@@ -1555,39 +1588,39 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "application/x-tcl" -> ["tcl"]
     "application/x-tex" -> ["tex"]
     "application/x-tex-tfm" -> ["tfm"]
-    "application/x-texinfo" -> ["texinfo","texi"]
+    "application/x-texinfo" -> ["texinfo", "texi"]
     "application/x-tgif" -> ["obj"]
     "application/x-ustar" -> ["ustar"]
     "application/x-wais-source" -> ["src"]
-    "application/x-x509-ca-cert" -> ["der","crt"]
+    "application/x-x509-ca-cert" -> ["der", "crt"]
     "application/x-xfig" -> ["fig"]
     "application/x-xliff+xml" -> ["xlf"]
     "application/x-xpinstall" -> ["xpi"]
     "application/x-xz" -> ["xz"]
-    "application/x-zmachine" -> ["z1","z2","z3","z4","z5","z6","z7","z8"]
+    "application/x-zmachine" -> ["z1", "z2", "z3", "z4", "z5", "z6", "z7", "z8"]
     "application/xaml+xml" -> ["xaml"]
     "application/xcap-diff+xml" -> ["xdf"]
     "application/xenc+xml" -> ["xenc"]
-    "application/xhtml+xml" -> ["xhtml","xht"]
-    "application/xml" -> ["xml","xsl"]
+    "application/xhtml+xml" -> ["xhtml", "xht"]
+    "application/xml" -> ["xml", "xsl"]
     "application/xml-dtd" -> ["dtd"]
     "application/xop+xml" -> ["xop"]
     "application/xproc+xml" -> ["xpl"]
     "application/xslt+xml" -> ["xslt"]
     "application/xspf+xml" -> ["xspf"]
-    "application/xv+xml" -> ["mxml","xhvml","xvml","xvm"]
+    "application/xv+xml" -> ["mxml", "xhvml", "xvml", "xvm"]
     "application/yang" -> ["yang"]
     "application/yin+xml" -> ["yin"]
     "application/zip" -> ["zip"]
     "audio/adpcm" -> ["adp"]
-    "audio/basic" -> ["au","snd"]
-    "audio/midi" -> ["mid","midi","kar","rmi"]
-    "audio/mp4" -> ["m4a","mp4a"]
-    "audio/mpeg" -> ["mpga","mp2","mp2a","mp3","m2a","m3a"]
-    "audio/ogg" -> ["oga","ogg","spx"]
+    "audio/basic" -> ["au", "snd"]
+    "audio/midi" -> ["mid", "midi", "kar", "rmi"]
+    "audio/mp4" -> ["m4a", "mp4a"]
+    "audio/mpeg" -> ["mpga", "mp2", "mp2a", "mp3", "m2a", "m3a"]
+    "audio/ogg" -> ["oga", "ogg", "spx"]
     "audio/s3m" -> ["s3m"]
     "audio/silk" -> ["sil"]
-    "audio/vnd.dece.audio" -> ["uva","uvva"]
+    "audio/vnd.dece.audio" -> ["uva", "uvva"]
     "audio/vnd.digital-winds" -> ["eol"]
     "audio/vnd.dra" -> ["dra"]
     "audio/vnd.dts" -> ["dts"]
@@ -1600,14 +1633,14 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "audio/vnd.rip" -> ["rip"]
     "audio/webm" -> ["weba"]
     "audio/x-aac" -> ["aac"]
-    "audio/x-aiff" -> ["aif","aiff","aifc"]
+    "audio/x-aiff" -> ["aif", "aiff", "aifc"]
     "audio/x-caf" -> ["caf"]
     "audio/x-flac" -> ["flac"]
     "audio/x-matroska" -> ["mka"]
     "audio/x-mpegurl" -> ["m3u"]
     "audio/x-ms-wax" -> ["wax"]
     "audio/x-ms-wma" -> ["wma"]
-    "audio/x-pn-realaudio" -> ["ram","ra"]
+    "audio/x-pn-realaudio" -> ["ram", "ra"]
     "audio/x-pn-realaudio-plugin" -> ["rmp"]
     "audio/x-wav" -> ["wav"]
     "audio/xm" -> ["xm"]
@@ -1627,16 +1660,16 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "image/g3fax" -> ["g3"]
     "image/gif" -> ["gif"]
     "image/ief" -> ["ief"]
-    "image/jpeg" -> ["jpeg","jpg","jpe"]
+    "image/jpeg" -> ["jpeg", "jpg", "jpe"]
     "image/ktx" -> ["ktx"]
     "image/png" -> ["png"]
     "image/prs.btif" -> ["btif"]
     "image/sgi" -> ["sgi"]
-    "image/svg+xml" -> ["svg","svgz"]
-    "image/tiff" -> ["tiff","tif"]
+    "image/svg+xml" -> ["svg", "svgz"]
+    "image/tiff" -> ["tiff", "tif"]
     "image/vnd.adobe.photoshop" -> ["psd"]
-    "image/vnd.dece.graphic" -> ["uvi","uvvi","uvg","uvvg"]
-    "image/vnd.djvu" -> ["djvu","djv"]
+    "image/vnd.dece.graphic" -> ["uvi", "uvvi", "uvg", "uvvg"]
+    "image/vnd.djvu" -> ["djvu", "djv"]
     "image/vnd.dvb.subtitle" -> ["sub"]
     "image/vnd.dwg" -> ["dwg"]
     "image/vnd.dxf" -> ["dxf"]
@@ -1654,11 +1687,11 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "image/x-3ds" -> ["3ds"]
     "image/x-cmu-raster" -> ["ras"]
     "image/x-cmx" -> ["cmx"]
-    "image/x-freehand" -> ["fh","fhc","fh4","fh5","fh7"]
+    "image/x-freehand" -> ["fh", "fhc", "fh4", "fh5", "fh7"]
     "image/x-icon" -> ["ico"]
     "image/x-mrsid-image" -> ["sid"]
     "image/x-pcx" -> ["pcx"]
-    "image/x-pict" -> ["pic","pct"]
+    "image/x-pict" -> ["pic", "pct"]
     "image/x-portable-anymap" -> ["pnm"]
     "image/x-portable-bitmap" -> ["pbm"]
     "image/x-portable-graymap" -> ["pgm"]
@@ -1668,33 +1701,33 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "image/x-xbitmap" -> ["xbm"]
     "image/x-xpixmap" -> ["xpm"]
     "image/x-xwindowdump" -> ["xwd"]
-    "message/rfc822" -> ["eml","mime"]
-    "model/iges" -> ["igs","iges"]
-    "model/mesh" -> ["msh","mesh","silo"]
+    "message/rfc822" -> ["eml", "mime"]
+    "model/iges" -> ["igs", "iges"]
+    "model/mesh" -> ["msh", "mesh", "silo"]
     "model/vnd.collada+xml" -> ["dae"]
     "model/vnd.dwf" -> ["dwf"]
     "model/vnd.gdl" -> ["gdl"]
     "model/vnd.gtw" -> ["gtw"]
     "model/vnd.mts" -> ["mts"]
     "model/vnd.vtu" -> ["vtu"]
-    "model/vrml" -> ["wrl","vrml"]
-    "model/x3d+binary" -> ["x3db","x3dbz"]
-    "model/x3d+vrml" -> ["x3dv","x3dvz"]
-    "model/x3d+xml" -> ["x3d","x3dz"]
+    "model/vrml" -> ["wrl", "vrml"]
+    "model/x3d+binary" -> ["x3db", "x3dbz"]
+    "model/x3d+vrml" -> ["x3dv", "x3dvz"]
+    "model/x3d+xml" -> ["x3d", "x3dz"]
     "text/cache-manifest" -> ["appcache"]
-    "text/calendar" -> ["ics","ifb"]
+    "text/calendar" -> ["ics", "ifb"]
     "text/css" -> ["css"]
     "text/csv" -> ["csv"]
-    "text/html" -> ["html","htm"]
+    "text/html" -> ["html", "htm"]
     "text/n3" -> ["n3"]
-    "text/plain" -> ["txt","text","conf","def","list","log","in"]
+    "text/plain" -> ["txt", "text", "conf", "def", "list", "log", "in"]
     "text/prs.lines.tag" -> ["dsc"]
     "text/richtext" -> ["rtx"]
-    "text/sgml" -> ["sgml","sgm"]
+    "text/sgml" -> ["sgml", "sgm"]
     "text/tab-separated-values" -> ["tsv"]
-    "text/troff" -> ["t","tr","roff","man","me","ms"]
+    "text/troff" -> ["t", "tr", "roff", "man", "me", "ms"]
     "text/turtle" -> ["ttl"]
-    "text/uri-list" -> ["uri","uris","urls"]
+    "text/uri-list" -> ["uri", "uris", "urls"]
     "text/vcard" -> ["vcard"]
     "text/vnd.curl" -> ["curl"]
     "text/vnd.curl.dcurl" -> ["dcurl"]
@@ -1709,13 +1742,13 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "text/vnd.sun.j2me.app-descriptor" -> ["jad"]
     "text/vnd.wap.wml" -> ["wml"]
     "text/vnd.wap.wmlscript" -> ["wmls"]
-    "text/x-asm" -> ["s","asm"]
-    "text/x-c" -> ["c","cc","cxx","cpp","h","hh","dic"]
-    "text/x-fortran" -> ["f","for","f77","f90"]
+    "text/x-asm" -> ["s", "asm"]
+    "text/x-c" -> ["c", "cc", "cxx", "cpp", "h", "hh", "dic"]
+    "text/x-fortran" -> ["f", "for", "f77", "f90"]
     "text/x-java-source" -> ["java"]
     "text/x-nfo" -> ["nfo"]
     "text/x-opml" -> ["opml"]
-    "text/x-pascal" -> ["p","pas"]
+    "text/x-pascal" -> ["p", "pas"]
     "text/x-setext" -> ["etx"]
     "text/x-sfv" -> ["sfv"]
     "text/x-uuencode" -> ["uu"]
@@ -1727,31 +1760,31 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "video/h263" -> ["h263"]
     "video/h264" -> ["h264"]
     "video/jpeg" -> ["jpgv"]
-    "video/jpm" -> ["jpm","jpgm"]
-    "video/mj2" -> ["mj2","mjp2"]
-    "video/mp4" -> ["mp4","mp4v","mpg4"]
-    "video/mpeg" -> ["mpeg","mpg","mpe","m1v","m2v"]
+    "video/jpm" -> ["jpm", "jpgm"]
+    "video/mj2" -> ["mj2", "mjp2"]
+    "video/mp4" -> ["mp4", "mp4v", "mpg4"]
+    "video/mpeg" -> ["mpeg", "mpg", "mpe", "m1v", "m2v"]
     "video/ogg" -> ["ogv"]
-    "video/quicktime" -> ["qt","mov"]
-    "video/vnd.dece.hd" -> ["uvh","uvvh"]
-    "video/vnd.dece.mobile" -> ["uvm","uvvm"]
-    "video/vnd.dece.pd" -> ["uvp","uvvp"]
-    "video/vnd.dece.sd" -> ["uvs","uvvs"]
-    "video/vnd.dece.video" -> ["uvv","uvvv"]
+    "video/quicktime" -> ["qt", "mov"]
+    "video/vnd.dece.hd" -> ["uvh", "uvvh"]
+    "video/vnd.dece.mobile" -> ["uvm", "uvvm"]
+    "video/vnd.dece.pd" -> ["uvp", "uvvp"]
+    "video/vnd.dece.sd" -> ["uvs", "uvvs"]
+    "video/vnd.dece.video" -> ["uvv", "uvvv"]
     "video/vnd.dvb.file" -> ["dvb"]
     "video/vnd.fvt" -> ["fvt"]
-    "video/vnd.mpegurl" -> ["mxu","m4u"]
+    "video/vnd.mpegurl" -> ["mxu", "m4u"]
     "video/vnd.ms-playready.media.pyv" -> ["pyv"]
-    "video/vnd.uvvu.mp4" -> ["uvu","uvvu"]
+    "video/vnd.uvvu.mp4" -> ["uvu", "uvvu"]
     "video/vnd.vivo" -> ["viv"]
     "video/webm" -> ["webm"]
     "video/x-f4v" -> ["f4v"]
     "video/x-fli" -> ["fli"]
     "video/x-flv" -> ["flv"]
     "video/x-m4v" -> ["m4v"]
-    "video/x-matroska" -> ["mkv","mk3d","mks"]
+    "video/x-matroska" -> ["mkv", "mk3d", "mks"]
     "video/x-mng" -> ["mng"]
-    "video/x-ms-asf" -> ["asf","asx"]
+    "video/x-ms-asf" -> ["asf", "asx"]
     "video/x-ms-vob" -> ["vob"]
     "video/x-ms-wm" -> ["wm"]
     "video/x-ms-wmv" -> ["wmv"]
@@ -1762,29 +1795,30 @@ pub fn mimetype_to_extentions(mimetype : String) -> List(Extension) {
     "video/x-smv" -> ["smv"]
     "x-conference/x-cooltalk" -> ["ice"]
     _ -> [""]
-
   }
 }
 
-pub type ExtensionType = String
-pub fn web_extensions(extension : Extension) -> tuple(ExtensionType, Extension) {
+pub type ExtensionType =
+  String
+
+pub fn web_extensions(extension: Extension) -> #(ExtensionType, Extension) {
   case extension {
-    "css" -> tuple("text", "css")
-    "gif" -> tuple("image", "gif")
-    "html" -> tuple("text", "html")
-    "htm" -> tuple("text", "html")
-    "ico" -> tuple("image", "x-icon")
-    "jpeg" -> tuple("image", "jpeg")
-    "jpg" -> tuple("image", "jpeg")
-    "js" -> tuple("application", "javascript")
-    "mp3" -> tuple("audio", "mpeg")
-    "mp4" -> tuple("video", "mp4")
-    "ogg" -> tuple("audio", "ogg")
-    "ogv" -> tuple("video", "ogg")
-    "png" -> tuple("image", "png")
-    "svg" -> tuple("image", "svg+xml")
-    "wav" -> tuple("audio", "x-wav")
-    "webm" -> tuple("video", "webm")
-    _ -> tuple("application", "octet-stream")
+    "css" -> #("text", "css")
+    "gif" -> #("image", "gif")
+    "html" -> #("text", "html")
+    "htm" -> #("text", "html")
+    "ico" -> #("image", "x-icon")
+    "jpeg" -> #("image", "jpeg")
+    "jpg" -> #("image", "jpeg")
+    "js" -> #("application", "javascript")
+    "mp3" -> #("audio", "mpeg")
+    "mp4" -> #("video", "mp4")
+    "ogg" -> #("audio", "ogg")
+    "ogv" -> #("video", "ogg")
+    "png" -> #("image", "png")
+    "svg" -> #("image", "svg+xml")
+    "wav" -> #("audio", "x-wav")
+    "webm" -> #("video", "webm")
+    _ -> #("application", "octet-stream")
   }
 }

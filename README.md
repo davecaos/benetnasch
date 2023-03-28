@@ -19,12 +19,9 @@ import benetnasch
 ## Quick start
 
 ```sh
-# Build the project
-rebar3 compile
+# Run the tests
+gleam test
 
-# Run the eunit tests
-rebar3 eunit
-
-# Run the Erlang REPL
-rebar3 shell
+# Run gleam REPL
+gleam shell
 ```
