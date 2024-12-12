@@ -1,4 +1,4 @@
-# :musical_score: Mime de Benetnasch Eta
+# :musical_score: Mime de Benetnasch Eta 𓏢
 ## Mimetypes library for Gleam (A statically typed language for the Erlang VM)
 
 This library is a port of [@benoitc's](https://github.com/benoitc/)  https://github.com/benoitc/mimerl
